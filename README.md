@@ -1,6 +1,6 @@
 # tube8-scraper
 
-A bash script for archiving tube8 videos and playlists metadata in json.
+A bash script for archiving tube8 videos, channels and pornstars metadata in json.
 
 ## Requirements
 
