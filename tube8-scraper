@@ -69,7 +69,7 @@ get_pornstar() {
                 .key label | "%i",
                 .value span | "%i"
             } | ,
-            div .porn-star-stats; span m@Eft>"[0-9]+"; {
+            div .porn-star-stats; span i@Eft>"[0-9]+"; {
                 .rank.u [0] * l@[0] | "%i",
                 .videos.u [1] * l@[0] | "%i",
                 .views.u [2] * l@[0] | "%i"
@@ -100,7 +100,7 @@ get_channel() {
 }
 
 get_from_sitemap() {
-    for i in $(ucurl 'https://www.tube8.com/sitemap.xml' | reliq 'loc m@E>"/sitemap-'"$1"'.*\.xml" | "%i\n"')
+    for i in $(ucurl 'https://www.tube8.com/sitemap.xml' | reliq 'loc i@E>"/sitemap-'"$1"'.*\.xml" | "%i\n"')
     do
         for j in $(ucurl "$i" | reliq 'loc | "%i\n"')
         do
