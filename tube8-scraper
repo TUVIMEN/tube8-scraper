@@ -114,7 +114,7 @@ get_from_sitemap() {
 [ "$#" -eq '0' ] && { usage >&2; exit 1; }
 
 cookie_t="$(mktemp)"
-trap 'rm "$cookie_t"; exit'  HUP INT QUIT TERM PWR EXIT
+trap 'rm "$cookie_t"; exit' HUP INT QUIT TERM PWR EXIT RETURN
 
 while [ "$#" -gt 0 ]
 do
